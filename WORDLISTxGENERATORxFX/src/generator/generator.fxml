@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="generator.FXMLController">
+   <children>
+      <SplitPane dividerPositions="0.23293172690763053" layoutY="6.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="350.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="298.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="speichern" layoutX="186.0" layoutY="68.0" mnemonicParsing="false" onAction="#speichernKlick" prefHeight="35.0" prefWidth="125.0" text="SAVE" />
+                  <TextField fx:id="eingabe" layoutX="11.0" prefHeight="60.0" prefWidth="270.0" promptText="Put your Words into that Field ..">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="ausgabeAnzahl" editable="false" layoutX="281.0" prefHeight="60.0" prefWidth="60.0" promptText="Count">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <Button fx:id="hinzufuegen" defaultButton="true" layoutX="35.0" layoutY="68.0" mnemonicParsing="false" onAction="#hinzufuegenKlick" prefHeight="35.0" prefWidth="125.0" text="PUSH" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="300.0">
+               <children>
+                  <TextArea fx:id="ausgabeWordlist" editable="false" layoutX="9.0" layoutY="7.0" prefHeight="320.0" prefWidth="330.0" promptText="Wordlist ...">
+                     <font>
+                        <Font size="25.0" />
+                     </font></TextArea>
+                  <Button layoutX="112.0" layoutY="335.0" mnemonicParsing="false" onAction="#beendenKlick" prefHeight="35.0" prefWidth="125.0" text="CLOSE" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
