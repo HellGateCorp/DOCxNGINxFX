@@ -3,4 +3,4 @@
 
 # WORDLISTxGENERATORxFX
 
-A JavaFX based Wordlist-Generator Application that I made for another Project. It allows you to produce a Wordlist and save it on your Volume as a BIN-File.
+A JavaFX based Wordlist-Generator Application that I made for another Project. It allows you to produce a Wordlist and save it on your Volume as a BIN-File 0️⃣1️⃣1️⃣0️⃣1️⃣0️⃣0️⃣
