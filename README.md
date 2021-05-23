@@ -1,4 +1,5 @@
-![W-G](https://user-images.githubusercontent.com/83019866/119242941-a25b1780-bb62-11eb-9ead-d6abbc69c6a5.png)
+![C-N1](https://user-images.githubusercontent.com/83019866/119273554-bad33c80-bc0b-11eb-9855-1722b5022e11.png)
+![C-N2](https://user-images.githubusercontent.com/83019866/119273557-bc046980-bc0b-11eb-959a-d62be24475d6.png)
 
 # WORDLISTxGENERATORxFX
 
