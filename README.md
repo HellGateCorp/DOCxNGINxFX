@@ -3,8 +3,9 @@
 ![C-N2](https://user-images.githubusercontent.com/83019866/119273557-bc046980-bc0b-11eb-959a-d62be24475d6.png)
 
 # Version 2.0
-![sc1](https://user-images.githubusercontent.com/83019866/174688456-b9c79bad-def2-42c7-a027-c0ce7391f1ee.png)
-![sc2](https://user-images.githubusercontent.com/83019866/174688463-1a5b4c4d-e0a7-4c18-9b2d-d8af9afb85e4.png)
+![sc1](https://user-images.githubusercontent.com/83019866/174689038-04aa34b1-441c-4746-8931-5656728d53cc.png)
+![sc2](https://user-images.githubusercontent.com/83019866/174689042-ae92bb17-ed2b-4acc-b608-23d840cbb4fa.png)
+
  
 # WORDLISTxGENERATORxFX
 
