@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="848.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="generator.FXMLController">
+   <children>
+      <VBox prefHeight="847.5" prefWidth="1400.0">
+         <children>
+            <MenuBar>
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#neuKlick" text="New" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#ladenKlick" text="Load File" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#speichernKlick" text="Save" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#beendenKlick" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Actions">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#hinzufuegenKlick" text="Push Words" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#transformKlick" text="Reform all Selected" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Themes">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="White" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#switcherKlickGirlie" text="Girlie" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#switcherKlickBlack" text="Dark" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="How to Use?" />
+                        <MenuItem mnemonicParsing="false" text="About the Creator" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <SplitPane dividerPositions="0.004263093788063338, 0.12971985383678442, 0.2417783191230207, 0.9957369062119367" orientation="VERTICAL" prefHeight="823.0" prefWidth="1399.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="298.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="514.0">
+                     <children>
+                        <TextField fx:id="txCountDE" blendMode="GREEN" editable="false" focusTraversable="false" layoutX="1239.0" layoutY="13.0" mouseTransparent="true" prefHeight="50.0" prefWidth="149.0" promptText="KICKED DOUBLES">
+                           <font>
+                              <Font name="Impact" size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txCount" blendMode="GREEN" editable="false" focusTraversable="false" layoutX="173.0" layoutY="13.0" mouseTransparent="true" prefHeight="50.0" prefWidth="145.0" promptText="VALID ENTRIES">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtimer" blendMode="RED" editable="false" focusTraversable="false" layoutX="11.0" layoutY="13.0" mouseTransparent="true" prefHeight="50.0" prefWidth="150.0" promptText="TIMER">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="1239.0" layoutY="66.0" prefHeight="17.0" prefWidth="149.0" text="Counter Bar kicked Doubles" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="320.0" layoutY="57.0" prefHeight="50.0" prefWidth="618.0" text="Entrie-Bars where one Bar can handle one Word to PUSH IT into singlular or multiple Lines of Entries at once !" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="66.0" prefHeight="17.0" prefWidth="149.0" text="Progress Time Bar" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="171.0" layoutY="66.0" prefHeight="17.0" prefWidth="149.0" text="Counter Bar Entries" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="eingabe1" blendMode="EXCLUSION" focusTraversable="false" layoutX="329.0" layoutY="14.0" prefHeight="50.0" prefWidth="145.0" promptText="ENTRYBAR">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="eingabe21" blendMode="EXCLUSION" focusTraversable="false" layoutX="479.0" layoutY="14.0" prefHeight="50.0" prefWidth="145.0" promptText="ENTRYBAR">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="eingabe31" blendMode="EXCLUSION" focusTraversable="false" layoutX="629.0" layoutY="14.0" prefHeight="50.0" prefWidth="145.0" promptText="ENTRYBAR">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="eingabe41" blendMode="EXCLUSION" focusTraversable="false" layoutX="779.0" layoutY="13.0" prefHeight="50.0" prefWidth="145.0" promptText="ENTRYBAR">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="eingabe5" focusTraversable="false" layoutX="1078.0" layoutY="13.0" prefHeight="50.0" prefWidth="150.0" promptText="SEARCHBAR">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="255.364990234375" endY="-1.0" layoutX="1135.0" layoutY="69.0" startX="-193.8568115234375" startY="-1.0" strokeWidth="2.0" />
+                        <Line endX="257.364990234375" endY="0.44445037841796875" layoutX="1134.0" layoutY="8.0" startX="-191.24505615234375" startY="0.44445037841796875" strokeWidth="2.0" />
+                        <Line endX="94.364990234375" endY="1.0000076293945312" layoutX="1140.0" layoutY="66.0" startX="94.364990234375" startY="-57.55554962158203" strokeWidth="2.0" />
+                        <Line endX="94.364990234375" endY="1.0000076293945312" layoutX="837.0" layoutY="66.0" startX="94.364990234375" startY="-57.55554962158203" strokeWidth="2.0" />
+                        <Line endX="114.3055419921875" layoutX="828.0" layoutY="68.0" startX="-821.635009765625" startY="1.0" strokeWidth="2.0" />
+                        <Line endX="118.79962158203125" endY="-0.5555496215820312" layoutX="828.0" layoutY="9.0" startX="-822.635009765625" startY="-0.5555496215820312" strokeWidth="2.0" />
+                        <Line endX="94.364990234375" endY="1.0000076293945312" layoutX="230.0" layoutY="66.0" startX="94.364990234375" startY="-57.55554962158203" strokeWidth="2.0" />
+                        <Line endX="94.364990234375" endY="1.0000076293945312" layoutX="73.0" layoutY="67.0" startX="94.364990234375" startY="-57.55554962158203" strokeWidth="2.0" />
+                        <Line endX="93.95079803466797" endY="1.4999923706054688" layoutX="-89.0" layoutY="67.0" startX="94.364990234375" startY="-57.55554962158203" strokeWidth="2.0" />
+                        <Line endX="94.364990234375" endY="1.0000076293945312" layoutX="1297.0" layoutY="67.0" startX="94.364990234375" startY="-57.55554962158203" strokeWidth="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="DIFFERENCE" fill="#0b24c6" height="45.0" layoutX="937.0" layoutY="16.0" stroke="BLACK" strokeType="INSIDE" width="135.0" />
+                        <Button fx:id="search" blendMode="DIFFERENCE" defaultButton="true" focusTraversable="false" layoutX="940.0" layoutY="18.0" mnemonicParsing="false" onAction="#searchKlick" prefHeight="40.0" prefWidth="130.0" text="SEARCH FOR :" textFill="#030000">
+                           <font>
+                              <Font name="Impact" size="19.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="948.0" layoutY="66.0" prefHeight="32.0" prefWidth="272.0" text="SearchBar to SEARCH FOR one specific Match !" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1388.0" SplitPane.resizableWithParent="false">
+                     <children>
+                        <Button fx:id="speichern" blendMode="GREEN" defaultButton="true" layoutX="1010.0" layoutY="22.0" mnemonicParsing="false" onAction="#speichernKlick" prefHeight="40.0" prefWidth="130.0" text="SAVE IT">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="oeffnen" blendMode="GREEN" defaultButton="true" layoutX="248.0" layoutY="22.0" mnemonicParsing="false" onAction="#ladenKlick" prefHeight="40.0" prefWidth="130.0" text="LOAD IT" textFill="#030000">
+                           <font>
+                              <Font name="Impact" size="20.0" />
+                           </font>
+                        </Button>
+                        <RadioButton fx:id="woNR" layoutX="18.0" layoutY="45.0" mnemonicParsing="false" onAction="#radioNR" prefHeight="33.0" prefWidth="190.0" text="no Numbers [0-9]">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="toU" layoutX="1210.0" layoutY="45.0" mnemonicParsing="false" onAction="#radioToU" prefHeight="30.0" prefWidth="180.0" text="to UpperCase (ABC)">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="woDE" layoutX="18.0" layoutY="9.0" mnemonicParsing="false" onAction="#radioDE" prefHeight="33.0" prefWidth="190.0" selected="true" text="no Double Entries">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="toL" layoutX="1210.0" layoutY="10.0" mnemonicParsing="false" onAction="#radioToL" prefHeight="30.0" prefWidth="180.0" text="to LowerCase (abc)">
+                           <font>
+                              <Font name="Impact" size="18.0" />
+                           </font>
+                        </RadioButton>
+                        <Button layoutX="629.0" layoutY="51.0" mnemonicParsing="false" onAction="#clearAll" prefHeight="30.0" prefWidth="130.0" text="CLEAN IT">
+                           <font>
+                              <Font name="Impact" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="switcher" blendMode="RED" layoutX="610.0" layoutY="6.0" mnemonicParsing="false" onAction="#switcherKlick" prefHeight="28.0" prefWidth="51.0" text="SOFT" textFill="#030000">
+                           <font>
+                              <Font name="Impact" size="15.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="650.0" layoutY="31.0" prefHeight="23.0" prefWidth="77.0" text="Theme Toggle Bar" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="switcherGIRLIE" blendMode="GREEN" defaultButton="true" disable="true" layoutX="661.0" layoutY="6.0" mnemonicParsing="false" onAction="#switcherKlickGirlie" prefHeight="28.0" prefWidth="60.0" text="GIRLIE">
+                           <font>
+                              <Font name="Impact" size="15.0" />
+                           </font>
+                        </Button>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="DIFFERENCE" fill="#0b24c6" height="55.0" layoutX="780.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+                        <Button fx:id="transform" blendMode="DIFFERENCE" defaultButton="true" layoutX="784.0" layoutY="16.0" mnemonicParsing="false" onAction="#transformKlick" prefHeight="50.0" prefWidth="200.0" text="TRANSFORM IT" textFill="#030000">
+                           <font>
+                              <Font name="Impact" size="25.0" />
+                           </font>
+                        </Button>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="DIFFERENCE" fill="#0b24c6" height="55.0" layoutX="399.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+                        <Button fx:id="hinzufuegen" blendMode="DIFFERENCE" defaultButton="true" layoutX="402.0" layoutY="17.0" mnemonicParsing="false" onAction="#hinzufuegenKlick" prefHeight="50.0" prefWidth="201.0" text="PUSH IT" textFill="#030000">
+                           <font>
+                              <Font name="Impact" size="25.0" />
+                           </font>
+                        </Button>
+                        <Separator layoutX="205.0" layoutY="5.0" orientation="VERTICAL" prefHeight="72.0" prefWidth="5.0" />
+                        <Separator layoutX="1178.0" layoutY="8.0" orientation="VERTICAL" prefHeight="72.0" prefWidth="5.0" />
+                        <Label layoutX="400.0" layoutY="66.0" prefHeight="23.0" prefWidth="211.0" text="Pushing the typed Words from the Entrie-Bars" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="783.0" layoutY="65.0" prefHeight="23.0" prefWidth="211.0" text="Rebuild the List only with the selected Options" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="248.0" layoutY="59.0" prefHeight="23.0" prefWidth="132.0" text="Load a textbased File from Disk" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="196.0" layoutY="-1.0" prefHeight="23.0" prefWidth="8.0" text="O">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="197.0" layoutY="9.0" prefHeight="23.0" prefWidth="12.0" text="P">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="195.0" layoutY="19.0" prefHeight="23.0" prefWidth="8.0" text="T">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="197.0" layoutY="29.0" prefHeight="23.0" prefWidth="8.0" text="I">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="195.0" layoutY="39.0" prefHeight="23.0" prefWidth="8.0" text="O">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="195.0" layoutY="49.0" prefHeight="23.0" prefWidth="12.0" text="N">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="196.0" layoutY="61.0" prefHeight="17.0" prefWidth="8.0" text="S">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1185.0" layoutY="1.0" prefHeight="23.0" prefWidth="8.0" text="O">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1186.0" layoutY="11.0" prefHeight="23.0" prefWidth="12.0" text="P">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1184.0" layoutY="21.0" prefHeight="23.0" prefWidth="8.0" text="T">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1186.0" layoutY="31.0" prefHeight="23.0" prefWidth="8.0" text="I">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1184.0" layoutY="41.0" prefHeight="23.0" prefWidth="8.0" text="O">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1184.0" layoutY="51.0" prefHeight="23.0" prefWidth="12.0" text="N">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1185.0" layoutY="63.0" prefHeight="17.0" prefWidth="8.0" text="S">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1011.0" layoutY="58.0" prefHeight="23.0" prefWidth="132.0" text="Save all sellected as a Wordlist" underline="true">
+                           <font>
+                              <Font name="Trattatello" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="switcherBlack" blendMode="EXCLUSION" layoutX="720.0" layoutY="6.0" mnemonicParsing="false" onAction="#switcherKlickBlack" prefHeight="28.0" prefWidth="56.0" text="NEON">
+                           <font>
+                              <Font name="Impact" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="652.0" prefWidth="1185.0">
+                     <children>
+                        <SplitPane dividerPositions="0.19863994273443092, 0.3997852541159628, 0.601646385110952, 0.801360057265569" prefHeight="618.0" prefWidth="1399.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="630.0" prefWidth="228.0">
+                                 <children>
+                                    <TextField fx:id="txabc" blendMode="GREEN" editable="false" focusTraversable="false" layoutX="185.0" layoutY="9.0" mouseTransparent="true" prefHeight="40.0" prefWidth="80.0" promptText="counter">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <CheckBox fx:id="chabc" layoutX="12.0" layoutY="3.0" mnemonicParsing="false" onAction="#checkToL" prefHeight="53.0" prefWidth="162.0" selected="true" text="&quot;abc&quot; Lines">
+                                       <font>
+                                          <Font name="Silom" size="19.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <Label blendMode="GREEN" layoutX="10.0" layoutY="38.0" prefHeight="29.0" prefWidth="176.0" text="Influence the In- &amp; Output processing" underline="true">
+                                       <font>
+                                          <Font name="Trattatello" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="txtabc" blendMode="EXCLUSION" cache="true" editable="false" layoutX="6.0" layoutY="60.0" prefHeight="540.0" prefWidth="260.0" text="&#10;&#10;">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="271.0">
+                                 <children>
+                                    <TextField fx:id="txAbc" blendMode="GREEN" editable="false" focusTraversable="false" layoutX="184.0" layoutY="7.0" mouseTransparent="true" prefHeight="40.0" prefWidth="80.0" promptText="counter">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextArea fx:id="txtAbc" blendMode="EXCLUSION" cache="true" editable="false" layoutX="7.0" layoutY="60.0" prefHeight="540.0" prefWidth="260.0" text="&#10;&#10;">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                    <CheckBox fx:id="chAbc" layoutX="11.0" layoutY="4.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="160.0" selected="true" text="&quot;Abc&quot; Lines">
+                                       <font>
+                                          <Font name="Silom" size="19.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <Label blendMode="GREEN" layoutX="10.0" layoutY="36.0" prefHeight="32.0" prefWidth="174.0" text="Influence the In- &amp; Output processing" underline="true">
+                                       <font>
+                                          <Font name="Trattatello" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="630.0" prefWidth="228.0">
+                                 <children>
+                                    <TextField fx:id="txABC" blendMode="GREEN" editable="false" focusTraversable="false" layoutX="185.0" layoutY="9.0" mouseTransparent="true" prefHeight="40.0" prefWidth="80.0" promptText="counter">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextArea fx:id="txtABC" blendMode="DIFFERENCE" editable="false" layoutX="7.0" layoutY="60.0" prefHeight="365.0" prefWidth="260.0">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                    <CheckBox fx:id="chABC" layoutX="12.0" layoutY="3.0" mnemonicParsing="false" onAction="#checkToU" prefHeight="53.0" prefWidth="162.0" selected="true" text="&quot;ABC&quot; Lines">
+                                       <font>
+                                          <Font name="Silom" size="19.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <Label blendMode="GREEN" layoutX="10.0" layoutY="38.0" prefHeight="29.0" prefWidth="176.0" text="Influence the In- &amp; Output processing" underline="true">
+                                       <font>
+                                          <Font name="Trattatello" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="129.0" layoutX="138.0" layoutY="452.0" startX="-131.0" strokeWidth="2.0" />
+                                    <Line endX="129.0" layoutX="139.0" layoutY="602.0" startX="-131.0" strokeWidth="2.0" />
+                                    <Line endX="129.0" endY="3.0" layoutX="-122.0" layoutY="449.0" startX="129.0" startY="152.1893310546875" strokeWidth="2.0" />
+                                    <Line endX="128.0" endY="3.0" layoutX="139.0" layoutY="449.0" startX="129.0" startY="152.1893310546875" strokeWidth="2.0" />
+                                    <Label blendMode="GREEN" layoutX="37.0" layoutY="427.0" prefHeight="26.0" prefWidth="201.0" text="Pie Chart Bar of Summary from all Matches" underline="true">
+                                       <font>
+                                          <Font name="Trattatello" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <PieChart fx:id="pie" blendMode="GREEN" clockwise="false" labelLineLength="30.0" layoutX="7.0" layoutY="452.0" legendSide="TOP" prefHeight="150.0" prefWidth="260.0" title="Entrie Graph" titleSide="BOTTOM" />
+                                    <PieChart fx:id="pie2" blendMode="GREEN" clockwise="false" labelLineLength="30.0" layoutX="8.0" layoutY="452.0" legendSide="TOP" prefHeight="150.0" prefWidth="260.0" title="Entrie Graph" titleSide="BOTTOM" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="643.0" prefWidth="264.0">
+                                 <children>
+                                    <TextField fx:id="txnr" blendMode="GREEN" editable="false" focusTraversable="false" layoutX="182.0" layoutY="9.0" mouseTransparent="true" prefHeight="40.0" prefWidth="80.0" promptText="counter">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextArea fx:id="txtn" blendMode="EXCLUSION" editable="false" layoutX="4.0" layoutY="59.0" prefHeight="240.0" prefWidth="260.0">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                    <CheckBox fx:id="chnr" layoutX="9.0" layoutY="3.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="163.0" selected="true" text="&quot;0 -9&quot; Lines">
+                                       <font>
+                                          <Font name="Silom" size="19.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <TextField fx:id="txKey" blendMode="GREEN" editable="false" focusTraversable="false" layoutX="184.0" layoutY="308.0" mouseTransparent="true" prefHeight="40.0" prefWidth="80.0" promptText="counter">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <CheckBox fx:id="chendings" layoutX="9.0" layoutY="304.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="175.0" selected="true" text="&quot;Time:Stamps&quot;">
+                                       <font>
+                                          <Font name="Silom" size="17.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <TextArea fx:id="txtKey" blendMode="EXCLUSION" editable="false" layoutX="6.0" layoutY="361.0" prefHeight="240.0" prefWidth="260.0">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                    <Label blendMode="GREEN" layoutX="7.0" layoutY="35.0" prefHeight="32.0" prefWidth="184.0" text="Influence the In- &amp; Output processing" underline="true">
+                                       <font>
+                                          <Font name="Trattatello" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label blendMode="GREEN" layoutX="11.0" layoutY="341.0" prefHeight="25.0" prefWidth="184.0" text="Influence the In- &amp; Output processing" underline="true">
+                                       <font>
+                                          <Font name="Trattatello" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="260.0">
+                                 <children>
+                                    <TextField fx:id="txEndings" blendMode="GREEN" editable="false" focusTraversable="false" layoutX="186.0" layoutY="7.0" mouseTransparent="true" prefHeight="40.0" prefWidth="80.0" promptText="counter">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextArea fx:id="txtEndings" blendMode="EXCLUSION" editable="false" layoutX="8.0" layoutY="59.0" prefHeight="239.0" prefWidth="260.0">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                    <CheckBox fx:id="chkey" layoutX="10.0" layoutY="2.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="175.0" selected="true" text="&quot;@WebLinks&quot;">
+                                       <font>
+                                          <Font name="Silom" size="17.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <TextArea fx:id="txtcombo" blendMode="EXCLUSION" editable="false" layoutX="6.0" layoutY="361.0" prefHeight="240.0" prefWidth="260.0" text="&#10;">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextField fx:id="txCombo" blendMode="GREEN" editable="false" focusTraversable="false" layoutX="186.0" layoutY="308.0" mouseTransparent="true" prefHeight="40.0" prefWidth="80.0" promptText="counter">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <CheckBox fx:id="chcombo" layoutX="14.0" layoutY="304.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="168.0" selected="true" text="&quot;e@Mail.com&quot;">
+                                       <font>
+                                          <Font name="Silom" size="17.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <Label blendMode="GREEN" layoutX="11.0" layoutY="38.0" prefHeight="25.0" prefWidth="184.0" text="Influence the In- &amp; Output processing" underline="true">
+                                       <font>
+                                          <Font name="Trattatello" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label blendMode="GREEN" layoutX="9.0" layoutY="341.0" prefHeight="24.0" prefWidth="184.0" text="Influence the In- &amp; Output processing" underline="true">
+                                       <font>
+                                          <Font name="Trattatello" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1388.0" />
+               </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
